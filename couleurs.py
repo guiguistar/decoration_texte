@@ -27,10 +27,13 @@ class Palette:
     def italique(self, texte):
         return self.modifier_texte(texte, "3")
     def gras(self, texte):
-        return self.modifier_texte(texte, "2")
+        return self.modifier_texte(texte, "1")
+
 def tester():
     p = Palette()
     print p.colorer_chaine("Bonjour", "rouge") + p.italique(" le ") + p.colorer_fond("monde", "bleu")
     print "Texte normal."
     print p.gras("Texte en gras.")
-tester()
+
+if __name__ == '__main__':
+    tester()
